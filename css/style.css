@@ -44,6 +44,18 @@ time, mark, audio, video {
   overflow: hidden;
 }
 
+header, footer, section {
+  width: 100%;
+}
+
+section:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+}
+
 ul, li { list-style: none; }
 
 .container {
@@ -60,12 +72,16 @@ ul, li { list-style: none; }
 /*   Header
 /*---------------------*/
 
+.header.header--main {
+  height: 400px;
+  background: linear-gradient(rgba(0, 13, 110, 0.9) 13%, rgba(1, 171, 353, 1), rgba(25,70,186,0));
+}
+
 .header {
   position: absolute;
   top: 0;
-  width: 100%;
-  height: 400px;
-  background: linear-gradient(rgba(0, 13, 110, 0.9) 13%, rgba(1, 171, 353, 1), rgba(25,70,186,0));
+  height: 220px;
+  background: linear-gradient(rgba(0, 13, 110, 0.9) 18%, rgba(1, 171, 353, 0.8) 85%, rgba(25,70,186,0));
   z-index: 10;
   font-family: 'Roboto Condensed', sans-serif;
 }
@@ -82,7 +98,12 @@ ul, li { list-style: none; }
   width: 460px;
   height: 120px;
   margin: 0 auto;
-  background-image: url(../images/building-1.png);
+  background-image: url(../images/building.png);
+  background-size: cover;
+}
+
+.header__building-bg:hover {
+  background-image: url(../images/building-hover.png);
   background-size: cover;
 }
 
@@ -328,22 +349,50 @@ ul, li { list-style: none; }
 }
 
 /*---------------------*/
-/*   1/1 page
+/*   general-content
 /*---------------------*/
 
-.left-side_menu {
-	width:23%;
-	height:400px;
-	background-color: rgba(28,180,255,0.2);
-	margin: 40px;
-	margin-top:430px;
+.general-content {
+  margin-top:220px;
+  padding: 40px 0;
+
 }
 
-/*.content {
-	width:450px;
+.left-side-menu {
+  box-sizing: border-box;
+  float: left;
+	width:23%;
 	height:400px;
+  margin-right: 2%;
+  padding: 20px;
 	background-color: rgba(28,180,255,0.2);
-	margin: 40px;
-	margin-top:430px;
+  overflow: hidden;
 }
-/*
+
+.left-side-menu__list {
+
+}
+
+.left-side-menu__list li {
+  margin-bottom: 15px;
+}
+
+.left-side-menu__list a {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.left-side-menu__list a:hover {
+  color: #A00000;
+}
+
+.content {
+  box-sizing: border-box;
+  float: left;
+  width: 75%;
+  height:400px;
+  padding: 20px;
+  background-color: rgba(28,180,255,0.2);
+  overflow: hidden;
+}
+
