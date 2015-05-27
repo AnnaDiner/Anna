@@ -28,9 +28,9 @@
 	height: 750px;
 }
 
-@media screen and (max-width: 1200px) {
+/*@media screen and (max-width: 1200px) {
 	.bx-wrapper .slide { height: 670px;	}
-}
+}*/
 
 .bx-wrapper img {
 	width: 100%;
@@ -48,7 +48,11 @@
     	-ms-transform: translatez(0);
     	-o-transform: translatez(0);
     	transform: translatez(0);
-    height: 750px;
+    height: 670px;
+}
+
+@media screen and (max-width: 1200px) {
+	.bx-wrapper .slide { height: 600px!important; }
 }
 
 .bx-wrapper .bx-pager,

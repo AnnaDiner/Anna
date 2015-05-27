@@ -75,8 +75,8 @@ ul, li { list-style: none; }
 
 .header.header--main {
   height: 400px;
-  /*background: linear-gradient(rgba(0, 13, 110, 0.9) 13%, rgba(1, 171, 255, 1), rgba(25,70,186,0));*/
-  background: linear-gradient(rgba(0, 89, 108, 0.9) 20%, rgba(25, 40, 77, 1) 53%, rgba(255,255,255,0));
+  background: linear-gradient(rgba(0, 13, 110, 0.9) 13%, rgba(1, 171, 255, 1), rgba(25,70,186,0));
+  /*background: linear-gradient(rgba(0, 89, 108, 0.9) 20%, rgba(25, 40, 77, 1) 53%, rgba(255,255,255,0));*/
 }
 
 .header {
@@ -262,8 +262,8 @@ ul, li { list-style: none; }
 
 .footer-socail-link {
   display: inline-block;
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   cursor: pointer;
 }
 
@@ -427,52 +427,78 @@ ul, li { list-style: none; }
 .left-side-menu {
   box-sizing: border-box;
   float: left;
-  width:23%;
-  margin-right: 2%;
+  width: 24%;
+  margin-right: 1%;
   padding: 20px;
   overflow: hidden;
 }
 
-.left-side-menu .header-search {
-  position: static;
-  width: 100%;
-  margin-bottom: 20px;
-  background: #CFCFCF;
+.left-side-menu__list { margin-top: 20px; }
+
+.left-side-menu__list li {
+  margin-bottom: 15px;
+  padding-left: 30px;
+}
+ 
+.left-side-menu__list a {
+  display: block;
+  padding: 5px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: rgb(0,0,0);
+  font-family: 'Arial', serif;
+  font-size: 14px;
+}
+
+.left-side-menu__list a:hover {
+  background: #F4F4F4;
+}
+
+.left-side-menu__list li.active { background: url(../images/icon-rectangle.png) 10px center no-repeat; }
+
+.left-side-menu__list li.active a { background: #F4F4F4; }
+
+.left-side-menu-search {
+
+}
+
+.left-side-menu-search-input {
+  width: 75%;
+  height: 24px;
+  margin-right: 5px;
+  padding: 3px 6px 3px 20px;
+  border: 1px solid #7B7B7B;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  background: url(../images/icon-search.png) 2px center no-repeat;
+  background-size: 10%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-.left-side-menu .header-search-input {
-  background: #CFCFCF;
-}
-
-.left-side-menu .header-search-button {
+.left-side-menu-search-button {
+  position: relative;
+  height: 24px;
+  width: 20%;
+  padding-top: 2px;
   float: right;
-  margin-right: 25px;
-}
-
-.left-side-menu__list {
-
-}
-
-.left-side-menu__list li {
-  margin-bottom: 15px;
-  padding: 5px 0 5px 20px;
+  border: none;
+  color: #ffffff;
   border-radius: 5px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  background: linear-gradient(#8d8d8d 50%, #7f7f7f 50%);
 }
 
-.left-side-menu__list li:hover {
-  background: #CFCFCF;
+.left-side-menu-search-button span {
+  content: "";
+  display: inline-block;
+  height: 11px; 
+  width: 10px; 
+  background: url(../images/icon-rectangle-white.png);
 }
- 
-.left-side-menu__list a {
-  display: block;
-  text-decoration: none; 
-  color: rgb(0,0,0);
-  font-family: 'Arial', serif;
-  font-weight: 700;
-}
+
 
 /*--- content ---*/
 
@@ -481,37 +507,54 @@ ul, li { list-style: none; }
   padding: 40px 0;
 }
 
-.content {
-  box-sizing: border-box;
+.page-content-wrapper {
+  display: table;
   float: left;
   width: 75%;
-  padding: 20px;
-  border-left: 5px solid linear-gradient(rgba(0, 89, 108, 0.9) 20%, rgba(25, 40, 77, 1) 53%, rgba(255,255,255,0));
+  padding: 20px 0;
   overflow: hidden;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-.content p {
+.page-content-border {
+  display: table-cell;
+  width: 3px;
+  background: linear-gradient(rgba(0, 89, 108, 0.9) 20%, rgba(25, 40, 77, 1) 53%, rgba(255,255,255,0));
+}
+
+.page-content {
+  display: table-cell;
+  padding-left: 20px;
+}
+
+.page-content-wrapper p {
   margin-bottom: 10px;
-  text-indent: 30px;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 300;
 }
 
 .breadcrumbs {
   padding-bottom: 5px;
   margin-bottom: 20px;
   margin-left: 30px;
-  border-bottom: 2px solid #E6E6E6;
 }
 
 .breadcrumbs a,
 .breadcrumbs span {
   color: black;
   font-size: 20px;
-  text-transform: uppercase;
   text-decoration: none;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 300;
 }
 
 .breadcrumbs-separator {
-  
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: url(../images/icon-rectangle.png) center no-repeat;
 }
 
 .breadcrumbs a:hover {
