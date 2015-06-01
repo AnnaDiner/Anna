@@ -100,7 +100,7 @@
 	font-weight: bold;
 	color: #666;
 	padding-top: 20px;
-	display: none;
+	z-index: 10;
 }
 
 .bx-wrapper .bx-pager .bx-pager-item,
@@ -125,7 +125,7 @@
 
 .bx-wrapper .bx-pager.bx-default-pager a:hover,
 .bx-wrapper .bx-pager.bx-default-pager a.active {
-	background: #000;
+	background: #84B726;
 }
 
 /* DIRECTION CONTROLS (NEXT / PREV) */

@@ -91,7 +91,7 @@ ul, li { list-style: none; }
   height: 200px;
   background: linear-gradient(rgba(0, 74, 95, 1), rgba(18, 40, 77, 1), rgba(0,126,174,1));
   /*background: linear-gradient(rgba(0, 13, 110, 0.9) 18%, rgba(1, 171, 255, 0.8) 85%, rgba(25,70,186,0));*/
-  z-index: 10;
+  z-index: 15;
   font-family: 'Roboto Condensed', sans-serif;
 }
 
@@ -193,35 +193,40 @@ ul, li { list-style: none; }
 }
 
 .header-search {
-  position: absolute;
-  right: 0;
-  top: 12px;
-  width: 180px;
+  width: 220px;
   height: 22px;
   padding-left: 5px;
   border-radius: 5px;
-  background: #B5CBD2;
+  background: rgba(255,255,255,0.5);
   text-align: left;
 }
 
 .header-search-input {
   height: 20px;
-  width: 150px;
+  width: 190px;
   padding: 0;
   border: none;
   outline: none;
-  background: #B5CBD2;
+  background: transparent;
   vertical-align: top;
+  color: #fff;
 }
 
+.header-search-input::-webkit-input-placeholder { color: #fff; }
+.header-search-input::-moz-placeholder { color: #fff; }
+.header-search-input:-ms-input-placeholder { color: #fff; }
+.header-search-input:-moz-placeholder { color: #fff; }
+
 .header-search-button {
+  display: inline-block;
   width: 16px;
   height: 17px;
-  margin-top: 2px;
+  margin-top: 4px;
   border: none;
-  background: url(../images/icon-search.png) no-repeat;
+  background: url(../images/icon-search--white.png) no-repeat;
   background-size: contain;
   cursor: pointer;
+  vertical-align: top;
 }
 
 .header-menu-icon {
@@ -294,6 +299,10 @@ ul, li { list-style: none; }
     z-index: 20;
   }
 
+  .header__title-isu--open-menu a {
+    display: none;
+  }
+
   .header__title-isu img {
     margin-bottom: 20px;
   }
@@ -315,7 +324,7 @@ ul, li { list-style: none; }
 
   .header-menu-wrap.open { display: block; }
 
-  .header-menu-list { margin-top: 140px; }
+  .header-menu-list { margin-top: 100px; }
 
   .header-menu-item { float: none; }
 
@@ -470,9 +479,8 @@ ul, li { list-style: none; }
 .news {
 	position: relative;
 	width: 100%;
-	padding-top: 40px;
+	padding-top: 60px;
   font-family: 'Arial';
-  font-size: 16;
 }
 
 .news:before {
@@ -543,7 +551,6 @@ ul, li { list-style: none; }
     margin-bottom: 30px;
     padding-bottom: 20px;
     border-right: 0;
-    border-bottom: 1px solid grey;
   }
   
   .news-item:last-child {
@@ -702,4 +709,23 @@ ul, li { list-style: none; }
 .breadcrumbs a:hover {
   color: #7DC2E5;
   text-decoration: underline;
+}
+
+/*--- deanery ---*/
+.deanery-description {
+  margin-top: 30px;
+}
+
+.deanery-photo {
+  float: left; 
+  width: 65px;
+  margin-right: 20px;
+}
+
+.deanery-row {
+  margin-bottom: 20px;
+}
+
+.deanery-row:last-child {
+  margin-bottom: 0;
 }
