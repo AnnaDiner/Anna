@@ -51,6 +51,18 @@
 	.bx-wrapper .slide { height: 600px!important; }
 }
 
+@media screen and (max-width: 1000px) and (min-width: 920px) {
+	.bx-wrapper .bx-viewport { height: 530px!important; }
+}
+
+@media screen and (max-width: 920px) and (min-width: 850px) {
+	.bx-wrapper .bx-viewport { height: 480px!important; }
+}
+
+@media screen and (max-width: 850px) and (min-width: 768px) {
+	.bx-wrapper .bx-viewport { height: 440px!important; }
+}
+
 @media screen and (max-width: 640px) and (min-width: 600px) {
 	.bx-wrapper .bx-viewport { height: 350px!important; }
 }

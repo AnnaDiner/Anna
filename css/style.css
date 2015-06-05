@@ -69,20 +69,26 @@ ul, li { list-style: none; }
 
 .right { float: right; }
 
-.mobile { display: none; }
-
-@media screen and (max-width: 640px) and (min-width: 300px) {
-  .mobile { display: block; }
-}
 
 /*---------------------*/
 /*   Header
 /*---------------------*/
 
 .header.header--main {
+  position: relative;
   height: 200px;
   /*background: linear-gradient(rgba(0, 13, 110, 0.9) 13%, rgba(1, 171, 255, 1), rgba(25,70,186,0));*/
   /*background: linear-gradient(rgba(0, 89, 108, 0.9) 20%, rgba(25, 40, 77, 1) 53%, rgba(255,255,255,0));*/
+}
+
+.header--main:after {
+  content: '';
+  position: absolute;
+  bottom: -30px;
+  left: 0px;
+  height: 30px;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0));
 }
 
 .header {
@@ -103,8 +109,8 @@ ul, li { list-style: none; }
   position: absolute;
   right: 0;
   left: 0;
-  top: 15px;
-  width: 400px;
+  top: 30px;
+  width: 450px;
   height: 120px;
   margin: 0 auto;
   background-image: url(../images/building.png);
@@ -168,6 +174,7 @@ ul, li { list-style: none; }
   height: 50px;
   background-color: #00526E;
   text-align: center;
+  z-index: 10;
 }
 
 .header-menu-list {
@@ -177,7 +184,8 @@ ul, li { list-style: none; }
 }
 
 .header-menu-item {
-  float: left;
+  position: relative;
+  display: inline-block;
 }
 
 .header-menu-link {
@@ -187,12 +195,17 @@ ul, li { list-style: none; }
   text-transform: uppercase;
 }
 
+.header-menu-link:first-of-type {
+  padding-left: 0;
+}
+
 .header-menu-link:hover { 
   color: #7DC2E5;
   text-decoration: underline;
 }
 
 .header-search {
+  display: none;
   width: 220px;
   height: 22px;
   padding-left: 5px;
@@ -240,6 +253,34 @@ ul, li { list-style: none; }
   z-index: 20;
 }
 
+.header-tablet-submenu {
+  position: absolute;
+  /*display: none;*/
+}
+
+.header-tablet-submenu-item {
+  height: 25px;
+  line-height: 25px;
+  width: 300px;
+  text-align: left;
+}
+
+.header-tablet-submenu-item a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.header-tablet-submenu:before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 10px;
+}
+
+.header-mobile-content { display: none; }
+
+/*.header-tablet-menu { display: none; }*/
+
 @media screen and (max-width: 1200px) and (min-width: 1000px) {
   .header__building-bg {
     top: 20px;
@@ -270,6 +311,59 @@ ul, li { list-style: none; }
   .header__title-isu { width: 210px; }
 } 
 
+@media screen and (max-width: 1000px) and (min-width: 768px) {
+  .header-title { display: none; }
+
+  .header-menu-icon { display: none; }
+
+  .header-menu-wrap { background-color: transparent; }
+
+  .header-mobile-content {
+    display: block;
+  }
+
+  .header__logo-isu {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    margin: 0;
+    z-index: 20;
+  }
+
+  .header__title-isu {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 400px;
+    z-index: 20;
+  }
+
+  .header__title-isu a {
+    font-size: 18px;
+  }
+
+  .header-menu-list {
+    z-index: 40;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .header-tablet-menu {
+    z-index: 30;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /*display: block;*/
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(rgba(23, 41, 60, 1), rgba(0,90,119,1));
+  }
+}
+
 @media screen and (max-width: 640px) and (min-width: 300px) {
   .header-title { display: none; }
 
@@ -277,8 +371,11 @@ ul, li { list-style: none; }
 
   .header.header--main { height: 140px; }
 
+  .header-search { display: block; }
+
   .header-mobile-content {
     position: relative;
+    display: block;
   }
 
   .header__logo-isu {
@@ -326,7 +423,10 @@ ul, li { list-style: none; }
 
   .header-menu-list { margin-top: 100px; }
 
-  .header-menu-item { float: none; }
+  .header-menu-item {
+    float: none;
+    display: block;
+  }
 
 }
 
@@ -338,7 +438,7 @@ ul, li { list-style: none; }
   width: 100%;
   height: 100px;
   padding-top: 5px;
-  background: rgba(0,43,146, 0.9);
+  background: #005068;
 }
 
 .footer-social {
@@ -409,6 +509,7 @@ ul, li { list-style: none; }
 
 .footer-button-map {
   background: url(../images/map.png);
+  background-size: contain;
 }
 
 .footer-button-ask:hover:after {
@@ -417,6 +518,7 @@ ul, li { list-style: none; }
 
 .footer-button-ask {
   background: url(../images/ask.png);
+  background-size: contain;
 }
 
 .footer-button-poll:hover:after {
@@ -425,6 +527,7 @@ ul, li { list-style: none; }
 
 .footer-button-poll {
   background: url(../images/poll.png);
+  background-size: contain;
 }
 
 .footer-contacts {
@@ -461,16 +564,13 @@ ul, li { list-style: none; }
 /*---------------------*/
 
 .main-slider {
-  margin-top: 200px;
+  margin-top: 0px;
   width: 100%;
 }
 
 @media screen and (max-width: 640px) and (min-width: 300px) {
-
-.main-slider { margin-top: 130px; }
-
-
 }
+
 
 /*---------------------*/
 /*   News
@@ -492,7 +592,15 @@ ul, li { list-style: none; }
 	background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
 }
 
-.news-row { margin-bottom: 50px; }
+.news-block-title {
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid grey;
+  font-size: 24px;
+  color: grey;
+}
+
+.news-row { margin-bottom: 30px; }
 
 .news-row:after {
 	content: ".";
@@ -508,7 +616,6 @@ ul, li { list-style: none; }
   width: 32%;
   padding: 0 3% 15px 0;
   margin: 0 3% 20px 0;
-  border-right: 1px solid grey;
   box-sizing: border-box;
 }
 
@@ -516,7 +623,6 @@ ul, li { list-style: none; }
   padding: 0 0 15px 0;
   width: 29%;
   margin: 0 0px 20px 0;
-  border-right: none;
 }
 
 .news-title-and-date {
@@ -543,6 +649,16 @@ ul, li { list-style: none; }
   color: #326410;
   text-decoration: underline;
   font-size: 13px;
+}
+
+.news-all-link {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #326410;
+  text-decoration: underline;
+  font-size: 14px;
 }
 
 @media screen and (max-width: 640px) and (min-width: 300px) {
@@ -648,6 +764,9 @@ ul, li { list-style: none; }
   background: url(../images/icon-rectangle-white.png);
 }
 
+@media screen and (max-width: 1000px) and (min-width: 768px) {
+  .left-side-menu { display: none; }
+}
 
 /*--- content ---*/
 
@@ -709,6 +828,12 @@ ul, li { list-style: none; }
 .breadcrumbs a:hover {
   color: #7DC2E5;
   text-decoration: underline;
+}
+
+@media screen and (max-width: 1000px) and (min-width: 768px) {
+  .page-content-border { display: none; }
+
+  .page-content-wrapper { width: 100%; }
 }
 
 /*--- deanery ---*/

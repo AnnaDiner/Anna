@@ -13,4 +13,8 @@ $(document).ready(function(){
 			pageTitle.removeClass("header__title-isu--open-menu");
 		};
 	});
+
+	$('.header-menu-item').click(function(e) {
+
+	});
 });

@@ -32,12 +32,29 @@
 <header class="header header--main">
     <div class="header-menu-wrap " id="menu-wrap">
         <ul class="header-menu-list">
-            <div class="mobile header-search">
+            <div class="header-search">
                 <input type="text" class="header-search-input" placeholder="Поиск...">
                 <a href="#" class="header-search-button"></a>
             </div>
             <li class="header-menu-item">
                 <a href="about-faculty.html" class="header-menu-link">О факультете</a>
+                <ul class="header-tablet-submenu">
+                    <li class="header-tablet-submenu-item">
+                        <a href="#">Информация о нас</a>
+                    </li>
+                    <li class="header-tablet-submenu-item">
+                        <a href="#">Деканат</a>
+                    </li>
+                    <li class="header-tablet-submenu-item">
+                        <a href="#">Преподаватели</a>
+                    </li>
+                    <li class="header-tablet-submenu-item">
+                        <a href="#">Техническое оснащение</a>
+                    </li>
+                    <li class="header-tablet-submenu-item">
+                        <a href="#">Поощрения</a>
+                    </li>
+                </ul>
             </li>
 
             <li class="header-menu-item">
@@ -56,7 +73,13 @@
                 <a href="" class="header-menu-link">Личный кабинет</a>
             </li>
         </ul>
+
+        <div class="header-tablet-menu">
+        
+        </div>
     </div>
+
+    
 
     <div class="container">
         <div class="header-title">
@@ -73,10 +96,10 @@
             </div>
         </div>
 
-        <div class="header-mobile-content mobile">
-            <div class="header__logo-isu mobile"></div>
-            <div class="header-menu-icon mobile" id="menu-btn"></div>
-            <div class="header__title-isu mobile">
+        <div class="header-mobile-content">
+            <div class="header__logo-isu"></div>
+            <div class="header-menu-icon" id="menu-btn"></div>
+            <div class="header__title-isu">
                 <img src="images/isu-title-1.png">
                 <a href="index.html#">Факультет информационные системы в управлении</a>
             </div>
@@ -102,6 +125,7 @@
 
 <section class="news">
     <div class="container">
+        <h1 class="news-block-title">Новости</h1>
         <div class="news-row">
             <div class="news-item">
                 <div class="news-title-and-date">
@@ -160,8 +184,8 @@
             </div>
 		</div>
 			
-			
-        </div>
+		<a href="#" class="news-all-link">Смотреть все новости</a>	
+        
     </div>
 </section>
 
