@@ -75,7 +75,6 @@ ul, li { list-style: none; }
 /*---------------------*/
 
 .header.header--main {
-  position: relative;
   height: 200px;
   /*background: linear-gradient(rgba(0, 13, 110, 0.9) 13%, rgba(1, 171, 255, 1), rgba(25,70,186,0));*/
   /*background: linear-gradient(rgba(0, 89, 108, 0.9) 20%, rgba(25, 40, 77, 1) 53%, rgba(255,255,255,0));*/
@@ -92,8 +91,7 @@ ul, li { list-style: none; }
 }
 
 .header {
-  position: absolute;
-  top: 0;
+  position: relative;
   height: 200px;
   background: linear-gradient(rgba(0, 74, 95, 1), rgba(18, 40, 77, 1), rgba(0,126,174,1));
   /*background: linear-gradient(rgba(0, 13, 110, 0.9) 18%, rgba(1, 171, 255, 0.8) 85%, rgba(25,70,186,0));*/
@@ -109,7 +107,7 @@ ul, li { list-style: none; }
   position: absolute;
   right: 0;
   left: 0;
-  top: 30px;
+  top: 20px;
   width: 450px;
   height: 120px;
   margin: 0 auto;
@@ -125,21 +123,21 @@ ul, li { list-style: none; }
 }
 
 .header__logo-sibadi {
-  float: left;
+  float: right;
   width: 80px;
   height: 80px;
   margin-top: 35px;
-  margin-right: 10px;
+  margin-left: 10px;
   background-image: url(../images/logo_sibadi.png);
   background-size: cover;
 }
 
 .header__logo-isu {
-  float: right;
-  width: 80px;
+  float: left;
+  width: 80px; 
   height: 95px;
   margin-top: 35px;
-  margin-left: 10px;
+  margin-right: 10px;
   background-image: url(../images/logo_isu.png);
   background-repeat: no-repeat;
   background-size: contain;
@@ -253,15 +251,17 @@ ul, li { list-style: none; }
   z-index: 20;
 }
 
+.header-menu-item.active .header-tablet-submenu { display: block; }
+
 .header-tablet-submenu {
   position: absolute;
-  /*display: none;*/
+  display: none;
 }
 
 .header-tablet-submenu-item {
   height: 25px;
   line-height: 25px;
-  width: 300px;
+  width: 210px;
   text-align: left;
 }
 
@@ -274,16 +274,19 @@ ul, li { list-style: none; }
   content: '';
   display: block;
   width: 100%;
-  height: 10px;
+  height: 1px;
+  border: 1px solid white;
 }
 
 .header-mobile-content { display: none; }
 
-/*.header-tablet-menu { display: none; }*/
+.header-tablet-menu { display: none; }
+
+.header-tablet-menu.active { display: block; }
 
 @media screen and (max-width: 1200px) and (min-width: 1000px) {
   .header__building-bg {
-    top: 20px;
+    top: 25px;
     width: 350px;
   }
 
@@ -311,7 +314,7 @@ ul, li { list-style: none; }
   .header__title-isu { width: 210px; }
 } 
 
-@media screen and (max-width: 1000px) and (min-width: 768px) {
+@media screen and (max-width: 1000px) and (min-width: 640px) {
   .header-title { display: none; }
 
   .header-menu-icon { display: none; }
@@ -600,29 +603,18 @@ ul, li { list-style: none; }
   color: grey;
 }
 
-.news-row { margin-bottom: 30px; }
-
-.news-row:after {
-	content: ".";
-	display: block;
-	height: 0;
-	clear: both;
-	overflow: hidden;
-}
-
 .news-item {
   position: relative;
   float: left;
   width: 32%;
   padding: 0 3% 15px 0;
-  margin: 0 3% 20px 0;
+  margin: 0 3% 30px 0;
   box-sizing: border-box;
 }
 
-.news-item:last-child {
-  padding: 0 0 15px 0;
+.news-item:nth-child(3n) {
   width: 29%;
-  margin: 0 0px 20px 0;
+  margin-right: 0px;
 }
 
 .news-title-and-date {
@@ -771,7 +763,6 @@ ul, li { list-style: none; }
 /*--- content ---*/
 
 .general-content {
-  margin-top:220px;
   padding: 40px 0;
 }
 

@@ -1,35 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head> 
     <meta charset="utf-8" />
     <title>ISU</title>
     <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,700,300&subset=cyrillic,latin' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
     
-	<link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    
+
     <script src="js/jquery.min.js" type="text/javascript"></script>
-    <script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function(){
-          $('.slider4').bxSlider({
-            mode: 'fade',
-            auto: true,
-            slideWidth: 300,
-            minSlides: 1,
-            maxSlides: 1,
-            moveSlides: 1,
-            slideMargin: 0,
-            captions: true
-            // autoControls: true
-          });
-        });
-    </script>
 </head>
 <body>
-<header class="header header--main">
+<header class="header">
     <div class="header-menu-wrap " id="menu-wrap">
         <ul class="header-menu-list">
             <div class="header-search">
@@ -165,99 +149,49 @@
             <div class="header-menu-icon" id="menu-btn"></div>
             <div class="header__title-isu">
                 <img src="images/isu-title-1.png">
-                <a href="index.html">Факультет информационные системы в управлении</a>
+                <a href="index.html#">Факультет информационные системы в управлении</a>
             </div>
         </div>
     </div>
 </header>
 
-<section class="main-slider">
-    <div class="slider4">
-      <div class="slide"><img src="images/slider/1.jpg"></div>
-      <div class="slide"><img src="images/slider/2.jpg"></div>
-      <div class="slide"><img src="images/slider/3.jpg"></div>
-      <div class="slide"><img src="images/slider/4.jpg"></div>
-      <div class="slide"><img src="images/slider/5.jpg"></div>
-      <div class="slide"><img src="images/slider/8.jpg"></div>
-      <div class="slide"><img src="images/slider/9.jpg"></div>
-      <div class="slide"><img src="images/slider/11.jpg"></div>
-      <div class="slide"><img src="images/slider/13.jpg"></div>
-      <div class="slide"><img src="images/slider/15.jpg"></div>
-      <div class="slide"><img src="images/slider/17.jpg"></div>
+
+<section class="general-content">
+<div class="container">
+    <div class="left-side-menu">
+        <div class="left-side-menu-search">
+            <input type="text" class="left-side-menu-search-input">
+            <button type="button" value="" class="left-side-menu-search-button"><span></span></button>
+        </div>
+        <ul class="left-side-menu__list">
+            <li class="active"><a href="#">Специальности</a></li>
+            <li><a href="#">Дополнительное образование</a></li>
+            <li><a href="#">Наука</a></li>
+            <li><a href="#">Законы о высшем образовании</a></li>
+        </ul>
     </div>
-</section>
 
-<section class="news">
-    <div class="container">
-        <h1 class="news-block-title">Новости</h1>
-        <div>
-            <div class="news-item">
-                <div class="news-title-and-date">
-                    <span class="news-date">22 мая</span>
-                    <span class="news-title">Второй тур 75 Научно-технической конференции</span>
-                </div>
-    			<p>Второй тур 75 Научно-технической конференции и конкурса на лучший научный доклад.</p>
-                <a href="#" class="news-link">Читать далее...</a>
-            </div>
+    <div class="page-content-wrapper">
+        <div class="page-content-border"></div>
 
-            <div class="news-item">
-                <div class="news-title-and-date">
-                    <span class="news-date">22 мая</span>
-                    <span class="news-title">Второй тур 75 Научно-технической конференции</span>
-                </div>
-                <p>Второй тур 75 Научно-технической конференции и конкурса на лучший научный доклад.</p>
-                <a href="#" class="news-link">Читать далее...</a>
-            </div>
-
-            <div class="news-item">
-                <div class="news-title-and-date">
-                    <span class="news-date">22 мая</span>
-                    <span class="news-title">Второй тур 75 Научно-технической конференции</span>
-                </div>
-                <p>Второй тур 75 Научно-технической конференции и конкурса на лучший научный доклад.</p>
-                <a href="#" class="news-link">Читать далее...</a>
-            </div>
-    			
-    		<div class="news-item">
-                <div class="news-title-and-date">
-                    <span class="news-date">22 мая</span>
-                    <span class="news-title">Второй тур 75 Научно-технической конференции</span>
-                </div>
-                <p>Второй тур 75 Научно-технической конференции и конкурса на лучший научный доклад.</p>
-                <a href="#" class="news-link">Читать далее...</a>
-            </div>
-
-            <div class="news-item">
-                <div class="news-title-and-date">
-                    <span class="news-date">22 мая</span>
-                    <span class="news-title">Второй тур 75 Научно-технической конференции</span>
-                </div>
-                <p>Второй тур 75 Научно-технической конференции и конкурса на лучший научный доклад.</p>
-                <a href="#" class="news-link">Читать далее...</a>
-            </div>
-
-            <div class="news-item">
-                <div class="news-title-and-date">
-                    <span class="news-date">22 мая</span>
-                    <span class="news-title">Второй тур 75 Научно-технической конференции</span>
-                </div>
-                <p>Второй тур 75 Научно-технической конференции и конкурса на лучший научный доклад.</p>
-                <a href="#" class="news-link">Читать далее...</a>
+        <div class="page-content">
+            <div class="breadcrumbs">
+                <a href="#">Главная</a>
+                <span class="breadcrumbs-separator"></span>
+                <span>Специальности</span>
             </div>
         </div>
-			
-		<a href="#" class="news-all-link">Смотреть все новости</a>	
-        
     </div>
+</div>
 </section>
 
 <footer class="footer">
     <div class="container">
         <div class="footer-social">
-			<a href="#" class="footer-socail-link footer-social-link-fb"></a>
+            <a href="#" class="footer-socail-link footer-social-link-fb"></a>
             <a href="#" class="footer-socail-link footer-social-link-tw"></a>
             <a href="#" class="footer-socail-link footer-social-link-vk"></a>
-		</div>
+        </div>
 		
 		<div class="footer-contacts">
 			<p>644080, г. Омск, Пр. Мира, 5, СибАДИ, корпус 2, каб. 355</p>
