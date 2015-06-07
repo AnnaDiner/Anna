@@ -34,4 +34,8 @@ $(document).ready(function(){
 			};
 		};
 	});
+
+	if (document.documentElement.clientHeight >= document.body.clientHeight) {
+       $('.footer').addClass("footer--fixed");
+    }
 });

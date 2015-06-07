@@ -92,7 +92,7 @@ ul, li { list-style: none; }
 
 .header {
   position: relative;
-  height: 200px;
+  height: 210px;
   background: linear-gradient(rgba(0, 74, 95, 1), rgba(18, 40, 77, 1), rgba(0,126,174,1));
   /*background: linear-gradient(rgba(0, 13, 110, 0.9) 18%, rgba(1, 171, 255, 0.8) 85%, rgba(25,70,186,0));*/
   z-index: 15;
@@ -360,9 +360,8 @@ ul, li { list-style: none; }
     position: absolute;
     top: 0;
     left: 0;
-    /*display: block;*/
     width: 100%;
-    height: 200px;
+    height: 210px;
     background: linear-gradient(rgba(23, 41, 60, 1), rgba(0,90,119,1));
   }
 }
@@ -436,6 +435,11 @@ ul, li { list-style: none; }
 /*---------------------*/
 /*   Footer
 /*---------------------*/
+
+.footer--fixed {
+  position: absolute;
+  bottom: 0;
+}
 
 .footer {
   width: 100%;
@@ -756,8 +760,25 @@ ul, li { list-style: none; }
   background: url(../images/icon-rectangle-white.png);
 }
 
-@media screen and (max-width: 1000px) and (min-width: 768px) {
+@media screen and (max-width: 1000px) and (min-width: 640px) {
   .left-side-menu { display: none; }
+}
+
+@media screen and (max-width: 640px) and (min-width: 300px) {
+  .left-side-menu {
+    width: 100%;
+    padding: 0 10% 10px 10%;
+    margin-right: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+  }
+
+  .left-side-menu-search-input {
+    width: 82%;
+    background-size: 7%;
+  }
+
+  .left-side-menu-search-button { width: 15%; }
 }
 
 /*--- content ---*/
@@ -821,10 +842,16 @@ ul, li { list-style: none; }
   text-decoration: underline;
 }
 
-@media screen and (max-width: 1000px) and (min-width: 768px) {
+@media screen and (max-width: 1000px) and (min-width: 640px) {
   .page-content-border { display: none; }
 
   .page-content-wrapper { width: 100%; }
+}
+
+@media screen and (max-width: 640px) and (min-width: 300px) {
+  .page-content-wrapper { width: 100%; }
+
+  .page-content-border { display: none; }
 }
 
 /*--- deanery ---*/
