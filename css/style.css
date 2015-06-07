@@ -266,6 +266,7 @@ ul, li { list-style: none; }
 }
 
 .header-tablet-submenu-item a {
+  display: block;
   color: #fff;
   text-decoration: none;
 }

@@ -16,7 +16,7 @@ $(document).ready(function(){
 	
 	$('.header-menu-item').click(function(e) {
 		if (($(window).width()+15 <=1000) && ($(window).width()+15 >= 640)) {
-			e.preventDefault();
+			
 			var menuItem = $('.header-menu-item');
 
 			if (!$(this).hasClass("active")) {
@@ -32,10 +32,12 @@ $(document).ready(function(){
 				};
 				$('.header-tablet-menu').removeClass("active");
 			};
+			return false;
 		};
 	});
 
-	if (document.documentElement.clientHeight >= document.body.clientHeight) {
-       $('.footer').addClass("footer--fixed");
-    }
+	$('.header-tablet-submenu-item').click(function(e) {
+		var href = event.target.getAttribute('href');
+		document.location.href = href;
+	});
 });
