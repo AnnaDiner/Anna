@@ -1,8 +1,9 @@
 $(document).ready(function(){
+
+	// Script fot phone-menu
 	$('#menu-btn').click(function(e) {
 		var menuWrap = $('#menu-wrap');
 		var pageTitle = $('.header__title-isu');
-		console.log(menuWrap);
 		
 		if (!menuWrap.hasClass("open")) {
 			menuWrap.addClass("open");
@@ -14,6 +15,7 @@ $(document).ready(function(){
 		};
 	});
 	
+	// Script fot tablet dropdown menu
 	$('.header-menu-item').click(function(e) {
 		if (($(window).width()+15 <=1000) && ($(window).width()+15 >= 640)) {
 			
@@ -35,9 +37,18 @@ $(document).ready(function(){
 			return false;
 		};
 	});
-
 	$('.header-tablet-submenu-item').click(function(e) {
 		var href = event.target.getAttribute('href');
 		document.location.href = href;
+	});
+
+	// // Replace footer to bootom if page is to small
+	// if (document.documentElement.clientHeight >= document.body.clientHeight) {
+	// 	$('.footer').addClass("footer--fixed");
+	// }
+
+	//
+	$('.dropdown-link').click(function(e) {
+		$(this).toggleClass("active");
 	});
 });
